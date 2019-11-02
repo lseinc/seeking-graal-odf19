@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="GraalVM Function Graph Demo">
+    <meta name="author" content="Oracle Labs">
+    <title>GraalVM Function Graph Demo</title>
+
+    <style type='text/css'>
+.container
+{
+    position:relative;
+    width:50%;/*half the width of the whole page*/
+    height:50%;/*half the width of the whole page*/
+    margin:auto;/*center the whole thing*/
+}
+.set_height
+{
+    padding-bottom:50%;/*2:1 aspect ratio*/
+    position:fixed;
+    float:center;
+    width:50%;
+    height:50%;
+}
+    </style>
+
+</head>
+<body>
+  <div>
+    <!--form action="/graph" method="post">
+    f(x) = <input name="expression" type="text" placeholder="Enter an function of 'x'" required>
+    <input type="submit" value="Draw Function"-->
+
+    <form>
+      f(x) = <input id='expression' type="text" placeholder="Enter an function of 'x'" required>
+      <button type="submit" id='draw'>Draw Function</button>
+    </form>
+  </div>
+  <div class="container">
+    <div class="set_height" id='plot'>
+    </div>
+  </div>
+
+  <script
+      src="https://code.jquery.com/jquery-3.2.1.min.js"
+      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+</body>
+</html>
+
